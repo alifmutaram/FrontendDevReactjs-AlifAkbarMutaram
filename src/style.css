@@ -37,6 +37,14 @@ h2 {
   flex-direction: row;
   align-items: center;
 }
+.select {
+  margin-right: 1em;
+  border-radius: 0 !important;
+  border-bottom: 1px solid black !important;
+  border-top: 0 solid !important;
+  border-left: 0 solid !important;
+  border-right: 0 solid !important;
+}
 
 /* CARD STYLE */
 .card-title-name {

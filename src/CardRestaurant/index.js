@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../style.css";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const CardRestaurant = ({ img, location, price, desc, name }) => {
   const { push } = useHistory();
@@ -15,6 +15,7 @@ const CardRestaurant = ({ img, location, price, desc, name }) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{desc}.</Card.Text>
+
           <div className="card-title-name">
             <h6>{location}</h6>
             <h6>{price}</h6>
