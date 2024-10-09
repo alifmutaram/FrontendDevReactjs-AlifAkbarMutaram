@@ -1,8 +1,13 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "../style.css";
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const CardRestaurant = ({ img, location, price, desc, name }) => {
+  const { push } = useHistory();
+  const handleOnClick = () => {
+    push("/restaurant");
+  };
   return (
     <div>
       <Card style={{ width: "16rem", border: "0px solid" }}>
@@ -14,7 +19,9 @@ const CardRestaurant = ({ img, location, price, desc, name }) => {
             <h6>{location}</h6>
             <h6>{price}</h6>
           </div>
-          <Button className="button">LEARN MORE</Button>
+          <Button onClick={() => handleOnClick()} className="button">
+            LEARN MORE
+          </Button>
         </Card.Body>
       </Card>
     </div>
