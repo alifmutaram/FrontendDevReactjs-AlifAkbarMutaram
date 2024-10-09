@@ -1,0 +1,53 @@
+.main {
+  font-family: "open-sans";
+}
+.title-name {
+  font-weight: 100;
+}
+h5 {
+  color: rgb(168, 161, 161) !important;
+  font-weight: 100 !important;
+}
+h2 {
+  margin: 1.2em 0 1.1em 0 !important;
+  font-weight: 400 !important;
+  color: rgb(88, 84, 84) !important;
+}
+
+/* FILTER STYLE */
+.dropdown > button {
+  border-bottom: 1.9px solid rgb(197, 192, 192) !important;
+  border-radius: 0;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.clear-btn {
+  border-radius: 0 !important;
+  border: 1px solid rgb(240, 235, 235) !important;
+  width: 100%;
+  font-weight: 500 !important;
+  color: rgb(209, 208, 208) !important;
+  background-color: white !important;
+}
+.form-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* CARD STYLE */
+.card-title-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 200;
+}
+.button {
+  border-radius: 0 !important;
+  border: 0px solid !important;
+  width: 100%;
+  background-color: rgb(13, 13, 71) !important;
+}
