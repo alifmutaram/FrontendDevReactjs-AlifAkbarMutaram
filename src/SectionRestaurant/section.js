@@ -1,11 +1,27 @@
 import { DropdownButton, Table, Dropdown, Form, Button } from "react-bootstrap";
 import "../style.css";
 import CardRestaurant from "../CardRestaurant";
+import { useEffect, useState } from "react";
 
 const Section = () => {
-  console.log("test");
+  const [datas, setData] = useState([]);
+
+  const getData = () => {
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((respon) => setData(respon));
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <>
+    <div className="section-div">
       <Table className="mt-3" bordered>
         <tbody>
           <tr
@@ -27,7 +43,7 @@ const Section = () => {
                 variant="white"
                 title="Price"
               >
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-1"></Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
               </DropdownButton>
@@ -48,7 +64,23 @@ const Section = () => {
           </tr>
         </tbody>
       </Table>
-    </>
+      <h2>All Restaurants</h2>
+      <div className="card-result">
+        {datas.map(({ id, img, name, dsc, price, rate, country }) => {
+          return (
+            <div>
+              <CardRestaurant
+                name={name}
+                img={img}
+                location={country}
+                price={price}
+                desc={dsc}
+              />
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 
