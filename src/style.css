@@ -51,3 +51,11 @@ h2 {
   width: 100%;
   background-color: rgb(13, 13, 71) !important;
 }
+.card-result {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
