@@ -33,33 +33,20 @@ const RestaurantDetail = () => {
                       <Form.Check type="radio" label="Open Now" />
                     </Form>
                   </div>
-                  <DropdownButton
-                    className="dropdown me-2"
-                    variant="white"
-                    title="Price"
-                  >
-                    <Dropdown.Item href="#/action-1"></Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Another action
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Something else
-                    </Dropdown.Item>
-                  </DropdownButton>
-                  <DropdownButton
-                    className="dropdown"
-                    variant="white"
-                    title="Categories"
-                    mr-2
-                  >
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">
-                      Another action
-                    </Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">
-                      Something else
-                    </Dropdown.Item>
-                  </DropdownButton>
+                  <div style={{ display: "flex", flexDirection: "row" }}>
+                    <Form.Select size="sm" className="select">
+                      <option>Price</option>
+                      <option value="1">1 - 50</option>
+                      <option value="2">50 - 100</option>
+                      <option value="3">100 - 200</option>
+                    </Form.Select>
+                    <Form.Select size="sm" className="select">
+                      <option>Categories</option>
+                      <option>1 - 50</option>
+                      <option>50 - 100</option>
+                      <option>100 - 20</option>
+                    </Form.Select>
+                  </div>
                 </div>
                 <div>
                   <Button className="clear-btn">CLEAR ALL</Button>
